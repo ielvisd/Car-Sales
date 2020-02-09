@@ -15,5 +15,13 @@ export const addFeature = feature => {
   };
 };
 
+export const removeFeature = feature => {
+  // NOTE: Action object
+  return {
+    type: "REMOVE_FEATURE",
+    payload: feature
+  };
+};
+
 // Step IIIa - import the action into your component
 // Step IIIb - pass the AC into the object in the connect function call
