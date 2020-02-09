@@ -9,7 +9,13 @@ const AdditionalFeature = props => {
       {/* Add an onClick that will let you add a feature to your car */}
       {/* NOTE: Arrow function to use the return value */}
       <button
-        onClick={() => props.addFeature(props.feature.name)}
+        onClick={() =>
+          props.addFeature({
+            id: props.feature.id,
+            name: props.feature.name,
+            price: props.feature.price
+          })
+        }
         className="button"
       >
         Add

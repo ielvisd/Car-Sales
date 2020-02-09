@@ -7,12 +7,11 @@
 // NOTE: 3 - Action types - A variable to save us from horrible misspelling errors that are really hard to find and debug.
 
 // NOTE: Action Creator
-export const addFeature = name => {
-  console.log("featureName is: ", name);
+export const addFeature = feature => {
   // NOTE: Action object
   return {
     type: "ADD_FEATURE",
-    payload: name
+    payload: feature
   };
 };
 

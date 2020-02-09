@@ -11,7 +11,6 @@ import { connect } from "react-redux";
 
 const App = props => {
   const state = {
-    additionalPrice: 0,
     car: {
       price: 26395,
       name: "2019 Ford Mustang",
@@ -39,7 +38,7 @@ const App = props => {
     <div className="boxes">
       <div className="box">
         <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <AddedFeatures car={props.car} />
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
@@ -55,7 +54,8 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
-    additionalPrice: state.additionalPrice
+    additionalPrice: state.additionalPrice,
+    car: state.car
   };
 };
 
