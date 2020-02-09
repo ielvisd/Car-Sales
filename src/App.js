@@ -9,7 +9,7 @@ import Total from "./components/Total";
 // Use the connect function to map our state from the Redux store to the component props
 import { connect } from "react-redux";
 
-const App = () => {
+const App = props => {
   const state = {
     additionalPrice: 0,
     car: {
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   const buyItem = item => {
-    // dipsatch an action here to add an item
+    // dispatch an action here to add an item
   };
 
   return (
@@ -43,7 +43,7 @@ const App = () => {
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <Total car={state.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
   );

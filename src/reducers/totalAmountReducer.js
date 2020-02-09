@@ -11,6 +11,19 @@ export const initialState = {
 export const totalAmountReducer = (state = initialState, action) => {
   console.log(state, action);
   switch (action.type) {
+    case "ADD_FEATURE":
+      // Check if it's already added
+      // If so pass and do nothing
+      // Otherwise add it to the car features
+      // and update the price
+
+      return {
+        ...state,
+        car: {
+          price: state.car.price,
+          features: [...state.car.features, action.payload]
+        }
+      };
     default:
       return state;
   }
